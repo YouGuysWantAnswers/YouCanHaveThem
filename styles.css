@@ -1,0 +1,28 @@
+body{
+	background-color: black;
+}
+.text{
+	color: red;
+	text-shadow: white;
+	font-size: 200%;
+}
+.link{
+	color: white;
+	text-shadow: white;
+	font-size: 100%;
+}
+.small{
+	color: red;
+	text-shadow: white;
+	font-size: 100%;
+}
+.med{
+	color: red;
+	text-shadow: white;
+	font-size: 150%;
+}
+.answer{
+	color: green;
+	text-shadow: white;
+	font-size: 100%;
+}
