@@ -1,9 +1,9 @@
 body{
-	background-image: url('JOJO.jpg');
-	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	background-color: A7CCED;
+	font-family: Helvetica;
 }
 .text{
-	color: red;
+	color: 545E75;
 	text-shadow: white;
 	font-size: 200%;
 }
@@ -13,12 +13,12 @@ body{
 	font-size: 100%;
 }
 .small{
-	color: red;
+	color: 545E75;
 	text-shadow: white;
 	font-size: 100%;
 }
 .med{
-	color: red;
+	color: 545E75;
 	text-shadow: white;
 	font-size: 150%;
 }
@@ -26,4 +26,27 @@ body{
 	color: green;
 	text-shadow: white;
 	font-size: 100%;
+}
+.textbox{
+	background-color:82A0BC;
+	width:20%;
+	padding:1%
+}
+.button{
+	position:relative;
+	width:20%;
+	height:10%;
+	left:25%;
+	bottom:60%;
+	background-color:7BBAF4;
+	font-size:max(4ch, 2%);
+}
+.buttonsmall{
+	position:relative;
+	width:10%;
+	height:5%;
+	left:1%;
+	bottom:80%;
+	background-color:63ADF2;
+	font-size:max(4ch, 2%);
 }
