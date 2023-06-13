@@ -1,6 +1,6 @@
 body {
-	background-color: #A7CCED;
-	font-family: Helvetica, Arial, sans-serif;
+	background-color: #F5F7FA;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	margin: 0;
 	padding: 0;
 }
@@ -14,10 +14,11 @@ body {
 .text {
 	color: #545E75;
 	font-size: 2rem;
+	margin-bottom: 20px;
 }
 
 .link {
-	color: #545E75;
+	color: #FFFFFF;
 	font-size: 1rem;
 	text-decoration: none;
 	display: inline-block;
@@ -25,40 +26,50 @@ body {
 	background-color: #7BBAF4;
 	padding: 10px 20px;
 	border-radius: 4px;
+	transition: background-color 0.3s ease;
+}
+
+.link:hover {
+	background-color: #63ADF2;
 }
 
 .small {
 	color: #545E75;
 	font-size: 1rem;
+	margin-bottom: 10px;
 }
 
 .med {
 	color: #545E75;
 	font-size: 1.5rem;
+	margin-bottom: 10px;
 }
 
 .answer {
-	color: green;
+	color: #32A852;
 	font-size: 1rem;
+	margin-bottom: 10px;
 }
 
 .textbox {
-	background-color: #82A0BC;
+	background-color: #FFFFFF;
 	width: 100%;
 	padding: 20px;
 	border-radius: 4px;
 	margin-bottom: 20px;
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .button {
 	background-color: #7BBAF4;
-	color: #545E75;
+	color: #FFFFFF;
 	font-size: 16px;
 	border: none;
 	padding: 10px 20px;
 	border-radius: 4px;
 	cursor: pointer;
 	margin-top: 10px;
+	transition: background-color 0.3s ease;
 }
 
 .button:hover {
@@ -66,11 +77,12 @@ body {
 }
 
 .textbox2 {
-	background-color: #82A0BC;
+	background-color: #FFFFFF;
 	width: 100%;
 	padding: 20px;
 	border-radius: 4px;
 	margin-top: 20px;
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .textbox2 input[type="text"] {
@@ -83,12 +95,13 @@ body {
 
 .textbox2 button {
 	background-color: #7BBAF4;
-	color: #545E75;
+	color: #FFFFFF;
 	font-size: 16px;
 	border: none;
 	padding: 10px 20px;
 	border-radius: 4px;
 	cursor: pointer;
+	transition: background-color 0.3s ease;
 }
 
 .textbox2 button:hover {
