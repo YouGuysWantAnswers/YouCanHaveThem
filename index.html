@@ -25,7 +25,40 @@
 			<a href = "peAnswers5.html" class="link"><button class="button">UNIT 1 TEST</button></a>
 			<br>
 			<a href = "peAnswers6.html" class="link"><button class="button">Mastery test 2.1 "Cardio Fitness and Endurance"</button></a>
+			<div class="textbox2">
 			<br>
+			<p class="med">Send me a site request, answer request, or anything you would like updated on the site<p>
+			<input class="button" id="textinput"></input>
+			<button onclick="sendMessage()" class="button" id="Send">Send</button>
+			</div>
+			<script>
+				  let canClick = true
+				  function sendMessage() {
+				  if (canClick){
+					canClick = false;
+					const request = new XMLHttpRequest();
+					request.open("POST", "https://discord.com/api/webhooks/1118240711976964127/ByLNvX7wWV0tTfVBH3o8XLiV3DuaaFnKJH-rgiaqz3BvhS224Y7fe66_hRuzIwqYDnRm");
+					request.setRequestHeader('Content-type', 'application/json');
+					let textinputval = document.getElementById("textinput").value
+					let displaytext = "Sent!"
+					let color = "#32a852"
+					if (textinputval == "add sex"){
+						textinputval = "somebody thinks their funny"
+						color = "#a83232";
+						displaytext = "no";
+					}
+					const params = {
+							avatar_url: "",
+							content: textinputval
+							
+					}
+					request.send(JSON.stringify(params));
+					document.getElementById("Send").style.backgroundColor = color;
+					document.getElementById("Send").innerHTML = displaytext;
+					}
+				
+			}
+			</script>
 			
 			
 	</body>

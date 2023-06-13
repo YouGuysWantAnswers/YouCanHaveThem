@@ -50,3 +50,10 @@ body{
 	background-color:63ADF2;
 	font-size:max(4ch, 2%);
 }
+.textbox2{
+	position:relative;
+	bottom:40%;
+	background-color:82A0BC;
+	width:70%;
+	padding:1%
+}
