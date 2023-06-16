@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <title>pe answers lmfao</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
     <div class="textbox">
@@ -49,9 +50,9 @@
     </div>
     <script>
         let canClick = true;
+		let textvalid = false
         function sendMessage() {
             if (canClick) {
-                canClick = false;
                 const request = new XMLHttpRequest();
                 request.open("POST", "https://discord.com/api/webhooks/1118240711976964127/ByLNvX7wWV0tTfVBH3o8XLiV3DuaaFnKJH-rgiaqz3BvhS224Y7fe66_hRuzIwqYDnRm");
                 request.setRequestHeader('Content-type', 'application/json');
@@ -59,15 +60,29 @@
                 let displaytext = "Sent!";
                 let color = "#32a852";
                 let nameinputval = document.getElementById("nameinput").value;
-                if (textinputval === "add sex") {
+                if (textinputval == "add sex") {
                     textinputval = "somebody thinks they're funny";
                     color = "#a83232";
                     displaytext = "No";
                 }
-                if (nameinputval === "") {
+				
+                if (nameinputval == "") {
                     nameinputval = "Anonymous Requester";
                 }
-
+				if (textinputval ==""){
+					textinput.placeholder = "Please enter valid text."
+					 color = "#a83232";
+					 displaytext = "Try again"
+					document.getElementById("Send").innerHTML = displaytext;
+					 document.getElementById("Send").style.backgroundColor = color;
+				}
+				else{
+					textvalid = true
+					displaytext = "Sent!"
+					color = "#32a852";
+				}
+				if (textvalid){
+				canClick = false;
                 const params = {
                     username: nameinputval,
                     avatar_url: "",
@@ -76,6 +91,7 @@
                 request.send(JSON.stringify(params));
                 document.getElementById("Send").style.backgroundColor = color;
                 document.getElementById("Send").innerHTML = displaytext;
+				}
             }
         }
     </script>
@@ -89,32 +105,48 @@
     </div>
     <script>
         let canClick2 = true;
+		let textvalid2 = false;
         function sendMessage2() {
             if (canClick2) {
-                canClick2 = false;
-                const request2 = new XMLHttpRequest();
-                request2.open("POST", "https://discord.com/api/webhooks/1118241256166920365/nbHWWleDEjjgB_E5xFaVk_lJ3AXXZD_ES5AF5Kakzwt65xcgqCfzGEz_j_RcwcwRwVF4");
-                request2.setRequestHeader('Content-type', 'application/json');
-                let textinputval2 = document.getElementById("textinput2").value;
-                let displaytext2 = "Sent!";
-                let color2 = "#32a852";
-                let nameinputval2 = document.getElementById("nameinput2").value;
-                if (textinputval2 === "add sex") {
-                    textinputval2 = "somebody thinks they're funny";
-                    displaytext2 = "What is sex?";
+                const request = new XMLHttpRequest();
+                request.open("POST", "https://discord.com/api/webhooks/1118241256166920365/nbHWWleDEjjgB_E5xFaVk_lJ3AXXZD_ES5AF5Kakzwt65xcgqCfzGEz_j_RcwcwRwVF4");
+                request.setRequestHeader('Content-type', 'application/json');
+                let textinputval = document.getElementById("textinput2").value;
+                let displaytext = "Sent!";
+                let color = "#32a852";
+                let nameinputval = document.getElementById("nameinput2").value;
+                if (textinputval == "add sex") {
+                    textinputval = "somebody thinks they're funny";
+                    color = "#a83232";
+                    displaytext = "whats sex";
                 }
-                if (nameinputval2 === "") {
-                    nameinputval2 = "Anonymous Requester";
+				
+                if (nameinputval == "") {
+                    nameinputval = "Anonymous Requester";
                 }
-
-                const params2 = {
-                    username: nameinputval2,
+				if (textinputval ==""){
+					textinput.placeholder = "Please enter valid text."
+					 color = "#a83232";
+					 displaytext = "Try again"
+					document.getElementById("Send2").innerHTML = displaytext;
+					 document.getElementById("Send2").style.backgroundColor = color;
+				}
+				else{
+					textvalid2 = true
+					displaytext = "Sent!"
+					color = "#32a852";
+				}
+				if (textvalid2){
+				canClick2 = false;
+                const params = {
+                    username: nameinputval,
                     avatar_url: "",
-                    content: textinputval2
+                    content: textinputval
                 };
-                request2.send(JSON.stringify(params2));
-                document.getElementById("Send2").style.backgroundColor = color2;
-                document.getElementById("Send2").innerHTML = displaytext2;
+                request.send(JSON.stringify(params));
+                document.getElementById("Send2").style.backgroundColor = color;
+                document.getElementById("Send2").innerHTML = displaytext;
+				}
             }
         }
     </script>
