@@ -1,0 +1,164 @@
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+		<title>
+			unit 2 test answers lol
+		</title
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+	</head>
+	<body>
+		<div>
+			
+			<p class="text">UNIT 2 POST TEST </p> <br>
+			
+			<a href = "index.html" ><button class="buttonsmall">Back</button></a>
+			
+			<p class="text">in case answer letters are randomized, choose the one cooresponding to the answer, not the letter.</p>
+			<p class="text">I got all these answers from </p><a class="text" href = https://quizlet.com/590317556/post-test-improving-performance-flash-cards/>this </a><p class="text">quizlet, more answers can likely be found on this account.</p>
+			<br>
+			
+			<p class = "med">MASTERY TEST 2.4</p>
+			
+			<br>
+			<div class="textbox">
+			<p class="small">What is the ability to complete extended periods of physical activity?<p> <p class='answer'>B. endurance</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">Which of the following is often found in individuals who are active and eating a healthy diet?<p class='answer'>D. increased blood circulation to the body</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">Which step is usually NOT performed when finding a pulse?<p class='answer'>C. making a fist to find a pulse in the wrist</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">The bar chart shows the percentage of adults in the U.S. living with certain heart disease risk factors. Which conclusion can be drawn from the chart?<p class='answer'>  A. About 30% of adults are living with obesity, high blood pressure, or both.</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">Why should you include weight training as part of your exercise routine? I. to increase muscle mass II. to increase bone density III. to increase flexibility<p class='answer'> D. I, II, and III</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">John is training for a competition in which he will be judged on the size and definition of his muscles. How should he train?<p class='answer'> B. John should complete several weight-lifting routines over time.</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">What does muscular strength measure?<p class='answer'>B. the amount of force that a muscle or muscle group can exert in a single effort</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">Which activity is ideal for fast-twitch muscles?<p class='answer'>I got this one incorrect, answer is NOT A. running, answer wasn't on quizet, fuck you brainly, don't listen to anything on there. if you find the answer (or anything it isn't), suggest it in the box at the bottom.</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">In this image, what must the students' muscles do to pull the rope?<p class='answer'>D. contract and relax</p>
+			</div>
+			<div class="textbox">
+			<p class="small">Which statement is true regarding flexibility?<p class='answer'>B. A joint's range of motion will be lost if the joint is not used regularly.</p>
+			</div>
+			<div class="textbox">
+			<p class="small">Why should you measure your level of flexibility?<p> <p class='answer'>B. to track your improvements in flexibility over time</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">John stretched while his muscles were cold. Which negative effect could occur?<p class='answer'>C. He could injure or pull a muscle.</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">When is the best time to stretch during an exercise routine?<p class='answer'>A. after the warm up</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">Andrea wants to improve her flexibility. Which form of exercise would be the least beneficial?<p class='answer'>D. weightlifting</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">A loss of consciousness is an example of what kind of injury?<p class='answer'>C. critical injury</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">Sally is training for the 1,000-meter running race at her school. Her goal is to place third or better. How can Sally determine if she is making progress toward her goal?<p class='answer'> A. She can monitor her practice run times to see if they are decreasing.</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">What type of force does a backpack exert on the body’s back and hips?<p class='answer'>B. compresion</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">Which term refers to the use of strength to hold the body's position?<p class='answer'>B. Balance</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">Which activity will relieve tension in the legs?<p class='answer'>A. stretching your legs before a run</p>
+			</div>
+			<div class="textbox">
+			<p class="small">Which statement is true regarding flexibility?<p class='answer'>B. A joint's range of motion will be lost if the joint is not used regularly.</p>
+			</div>
+			<br>
+		</div>
+		
+		
+			<div class="textbox2">
+    <br>
+	<p class="med">Answer not here? Submit it here and I will add it!</p>
+    <input id="nameinput" placeholder="Name of Mastery Test" class="button">
+    <input id="textinput" placeholder="Question & Answer (if possible)" class="button">
+    <button onclick="sendMessage()" class="button" id="Send" >
+        Send
+    </button>
+</div>
+
+			 <script>
+        let canClick = true;
+		let textvalid = false
+		let namevalid = false
+        function sendMessage() {
+            if (canClick) {
+                const request = new XMLHttpRequest();
+                request.open("POST", "https://discord.com/api/webhooks/1118314591051587685/NQA5KlCTpqhsJJ5l9C0UXAaTTdSaeoSvE9xl2EwozFhkSjdbOhtA6ybdkoaL6UVqn579");
+                request.setRequestHeader('Content-type', 'application/json');
+				let nameinput = document.getElementById("nameinput")
+				let textinput = document.getElementById("textinput")
+                let textinputval = document.getElementById("textinput").value;
+                let displaytext = "Sent!";
+                let color = "#32a852";
+                let nameinputval = document.getElementById("nameinput").value;
+                if (textinputval === "") {
+					textinput.placeholder = "Please enter valid text."
+					 color = "#a83232";
+					 displaytext = "Try again"
+					document.getElementById("Send").innerHTML = displaytext;
+					 document.getElementById("Send").style.backgroundColor = color;
+                }
+				else{
+				textvalid = true
+				}
+                if (nameinputval === "") {
+                    nameinput.placeholder = "Please include the mastery test name and/or number ex: 1.1 Intro to Physical Education"
+					color = "#a83232";
+					displaytext = "Try again"
+					document.getElementById("Send").innerHTML = displaytext;
+					document.getElementById("Send").style.backgroundColor = color;
+                }
+				else{
+			
+				namevalid = true
+				}
+				if (namevalid && textvalid){
+				canClick = false;
+                const params = {
+                    username: nameinputval,
+                    avatar_url: "",
+                    content: textinputval
+                };
+                request.send(JSON.stringify(params));
+                document.getElementById("Send").style.backgroundColor = color;
+                document.getElementById("Send").innerHTML = displaytext;
+				}
+            }
+        }
+    </script>
+	</body>
+</html>
