@@ -1,0 +1,121 @@
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+		<title>
+			mastery test 3.1 answers lol
+		</title
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+	</head>
+	<body>
+		<div>
+			
+			<p class="text">3.1 MASTERY TEST</p> <br>
+			
+			<a href = "index.html" ><button class="buttonsmall">Back</button></a>
+			
+			<p class="text">in case answer letters are randomized, choose the one cooresponding to the answer, not the letter.</p>
+			<br>
+			
+			<p class = "med">MASTERY TEST 3.1	</p>
+			
+			<br>
+			<div class="textbox">
+			<p class="small">Alessandro has committed to riding his bike to and from school when the weather is good. All week, he rides to school without any problems. But on Friday, he remembers that he must bring home equipment for a science experiment that is too big to carry on a bike. What did Alessandro forget to do before making his lifestyle change?<p> <p class='answer'>A. consider his conflicts</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">If you want to resolve conflicts that arise in your life, what must you have?<p class='answer'>A. a list of priorities</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">How can you measure your level of intensity during a physical activity?<p class='answer'>C. Take your heart rate or pulse.</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">At a young age, who has the greatest influence on your choices?<p class='answer'>  A. Parents or guardians</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">What is a pattern of behavior that you often repeat?<p class='answer'> B. a habit</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">During physical activity of moderate intensity, your heart will beat at a percentage of its maximum rate. What is the target heart rate for moderate-intensity activity?<p class='answer'> B. 50% to 70%</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">A teen gave up smoking to improve her lifestyle. What is another way to state what she did?<p class='answer'>B. She made a personal choice.</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">Sal is thinking about making a positive change in his life. But there are risks involved. Which is the healthiest way that Sal can approach these risks?<p class='answer'>D. Sal should assess the risks, try to reduce them, and make the change.</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">What is one benefit to lifelong physical activity?	<p class='answer'>B. Lower risk of stroke</p>
+			</div>
+		</div>
+		
+		
+			<div class="textbox2">
+    <br>
+	<p class="med">Answer not here? Submit it here and I will add it!</p>
+    <input id="nameinput" placeholder="Name of Mastery Test" class="button">
+    <input id="textinput" placeholder="Question & Answer (if possible)" class="button">
+    <button onclick="sendMessage()" class="button" id="Send" >
+        Send
+    </button>
+</div>
+
+			 <script>
+        let canClick = true;
+		let textvalid = false
+		let namevalid = false
+        function sendMessage() {
+            if (canClick) {
+                const request = new XMLHttpRequest();
+                request.open("POST", "https://discord.com/api/webhooks/1118314591051587685/NQA5KlCTpqhsJJ5l9C0UXAaTTdSaeoSvE9xl2EwozFhkSjdbOhtA6ybdkoaL6UVqn579");
+                request.setRequestHeader('Content-type', 'application/json');
+				let nameinput = document.getElementById("nameinput")
+				let textinput = document.getElementById("textinput")
+                let textinputval = document.getElementById("textinput").value;
+                let displaytext = "Sent!";
+                let color = "#32a852";
+                let nameinputval = document.getElementById("nameinput").value;
+                if (textinputval === "") {
+					textinput.placeholder = "Please enter valid text."
+					 color = "#a83232";
+					 displaytext = "Try again"
+					document.getElementById("Send").innerHTML = displaytext;
+					 document.getElementById("Send").style.backgroundColor = color;
+                }
+				else{
+				textvalid = true
+				}
+                if (nameinputval === "") {
+                    nameinput.placeholder = "Please include the mastery test name and/or number ex: 1.1 Intro to Physical Education"
+					color = "#a83232";
+					displaytext = "Try again"
+					document.getElementById("Send").innerHTML = displaytext;
+					document.getElementById("Send").style.backgroundColor = color;
+                }
+				else{
+			
+				namevalid = true
+				}
+				if (namevalid && textvalid){
+				canClick = false;
+                const params = {
+                    username: nameinputval,
+                    avatar_url: "",
+                    content: textinputval
+                };
+                request.send(JSON.stringify(params));
+                document.getElementById("Send").style.backgroundColor = color;
+                document.getElementById("Send").innerHTML = displaytext;
+				}
+            }
+        }
+    </script>
+	</body>
+</html>
