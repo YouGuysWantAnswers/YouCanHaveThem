@@ -74,14 +74,15 @@
 	<div class="textbox2">
     <br>
 	<p class="med">Answer not here? Submit it here and I will add it!</p>
-    <input id="nameinput" placeholder="Name of Mastery Test" class="button">
-    <input id="textinput" placeholder="Question & Answer (if possible)" class="button">
+    <input id="nameinput" placeholder="Question (copy and paste text)" class="button">
+    <input id="textinput" placeholder="Answer (or answer options if unsure)" class="button">
     <button onclick="sendMessage()" class="button" id="Send" >
         Send
     </button>
 </div>
 
 			 <script>
+		let masterytest = "peAnswers.html / Mastery test 1.1"
         let canClick = true;
 		let textvalid = false
 		let namevalid = false
@@ -97,7 +98,7 @@
                 let color = "#32a852";
                 let nameinputval = document.getElementById("nameinput").value;
                 if (textinputval === "") {
-					textinput.placeholder = "Please enter valid text."
+					textinput.placeholder = "Please enter valid answer (or answer options if unsure)"
 					 color = "#a83232";
 					 displaytext = "Try again"
 					document.getElementById("Send").innerHTML = displaytext;
@@ -107,7 +108,7 @@
 				textvalid = true
 				}
                 if (nameinputval === "") {
-                    nameinput.placeholder = "Please include the mastery test name and/or number ex: 1.1 Intro to Physical Education"
+                    nameinput.placeholder = "Please include the question in text."
 					color = "#a83232";
 					displaytext = "Try again"
 					document.getElementById("Send").innerHTML = displaytext;
@@ -119,10 +120,11 @@
 				}
 				if (namevalid && textvalid){
 				canClick = false;
+				let fulltext = "Question: "+nameinputval+"\nAnswer: "+textinputval
                 const params = {
-                    username: nameinputval,
+                    username: masterytest,
                     avatar_url: "",
-                    content: textinputval
+                    content: fulltext
                 };
                 request.send(JSON.stringify(params));
                 document.getElementById("Send").style.backgroundColor = color;
