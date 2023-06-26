@@ -1,0 +1,121 @@
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+		<title>
+			mastery test 3.2 answers lol
+		</title
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+	</head>
+	<body>
+		<div>
+			
+			<p class="text">3.2 MASTERY TEST</p> <br>
+			
+			<a href = "index.html" ><button class="buttonsmall">Back</button></a>
+			
+			<p class="text">SO SORRY i was super late with this one, ill get the rest done as fast as i can. Also i will soon know for sure if the tutorial questions are read. If my parents get an angry email from the school ill let you guys know.</p>
+			<br>
+			<img src="thug.PNG" alt="thugshaker do the thug  shaker omg "></img>
+			<p class = "med">MASTERY TEST 3.2	</p>
+			
+			<br>
+			<div class="textbox">
+			<p class="small">Paige ran four miles a day last week. This week, she ran five miles a day. How did adding a mile most likely affect her workout?<p> <p class='answer'>A. It increased both her intensity and her workout time.</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">Which training principle states that exercising a certain body part or practicing a particular skill primarily develops that part or skill?<p class='answer'>D. specificity</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">What training principle states that you must continue to exercise to maintain fitness?<p class='answer'>D. reversibility</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">Molly is jogging on the treadmill. After 20 minutes, her heart rate has not increased, she is able to talk, and she is not sweating. If Molly wants to improve her fitness level, what should she do?<p class='answer'>B. She should increase the intensity of her exercise.</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">How many days a week should children and teenagers get 60 minutes of physical activity?<p class='answer'>D. five days a week</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">Aiden is studying to become a personal trainer. He has to create a workout that includes some or all of the activities listed below. Which activities should Aiden include, and in which order, to create the best possible workout ?<p class='answer'> B. warm-up, stretch, exercise, cooldown</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">Xavier goes to the gym several days a week and does random exercises without a workout plan. After a month, he realizes that he is not making any progress. What should Xavier do?<p class='answer'>B. Set clear goals.</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">Patrick is jumping rope to train for his next boxing match. He learned the correct way to jump rope when he was a member of his school's wrestling team. Which training principle does this scenario represent?<p class='answer'>D. transfer</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">What is the third basic component of an exercise program that includes cardio and flexibility?<p class='answer'>C. Strength Training</p>
+			</div>
+		</div>
+		
+		
+			<div class="textbox2">
+    <br>
+	<p class="med">Answer not here? Submit it here and I will add it!</p>
+    <input id="nameinput" placeholder="Name of Mastery Test" class="button">
+    <input id="textinput" placeholder="Question & Answer (if possible)" class="button">
+    <button onclick="sendMessage()" class="button" id="Send" >
+        Send
+    </button>
+</div>
+
+			 <script>
+        let canClick = true;
+		let textvalid = false
+		let namevalid = false
+        function sendMessage() {
+            if (canClick) {
+                const request = new XMLHttpRequest();
+                request.open("POST", "https://discord.com/api/webhooks/1118314591051587685/NQA5KlCTpqhsJJ5l9C0UXAaTTdSaeoSvE9xl2EwozFhkSjdbOhtA6ybdkoaL6UVqn579");
+                request.setRequestHeader('Content-type', 'application/json');
+				let nameinput = document.getElementById("nameinput")
+				let textinput = document.getElementById("textinput")
+                let textinputval = document.getElementById("textinput").value;
+                let displaytext = "Sent!";
+                let color = "#32a852";
+                let nameinputval = document.getElementById("nameinput").value;
+                if (textinputval === "") {
+					textinput.placeholder = "Please enter valid text."
+					 color = "#a83232";
+					 displaytext = "Try again"
+					document.getElementById("Send").innerHTML = displaytext;
+					 document.getElementById("Send").style.backgroundColor = color;
+                }
+				else{
+				textvalid = true
+				}
+                if (nameinputval === "") {
+                    nameinput.placeholder = "Please include the mastery test name and/or number ex: 1.1 Intro to Physical Education"
+					color = "#a83232";
+					displaytext = "Try again"
+					document.getElementById("Send").innerHTML = displaytext;
+					document.getElementById("Send").style.backgroundColor = color;
+                }
+				else{
+			
+				namevalid = true
+				}
+				if (namevalid && textvalid){
+				canClick = false;
+                const params = {
+                    username: nameinputval,
+                    avatar_url: "",
+                    content: textinputval
+                };
+                request.send(JSON.stringify(params));
+                document.getElementById("Send").style.backgroundColor = color;
+                document.getElementById("Send").innerHTML = displaytext;
+				}
+            }
+        }
+    </script>
+	</body>
+</html>
