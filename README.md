@@ -1,2 +1,4 @@
-# You Can Have Them
-You guys want answers? You can have them! Here I will upload answers that I have gotten 100% permission to upload. Happy che- I mean Happy academic honesty!
+# free ansors free
+
+u can have free answers, just take them, share then with ppl, summer pe is dum dum
+
