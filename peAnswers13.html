@@ -1,0 +1,124 @@
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+		<title>
+			mastery test 3.3 answers lol
+		</title
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+	</head>
+	<body>
+		<div>
+			
+			<p class="text">3.3 MASTERY TEST</p> <br>
+			
+			<a href = "index.html" ><button class="buttonsmall">Back</button></a>
+			
+			<p class="text">Im gonna pump these out really fast, i just started leaving the tutorials blank.</p>
+			<br>
+			
+			<p class = "med">MASTERY TEST 3.3</p>
+			
+			<br>
+			<div class="textbox">
+			<p class="small">What is the best possible way to verify claims a manufacturer makes about a supplement's safety and effectiveness? <p> <p class='answer'>C. the US Food and Drug Administration website</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">John had a stroke and is having difficulty sitting and walking. Which medical professional should he consult to improve his physical abilities? <p class='answer'>C. physical therapist</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">Cassie lives two miles away from school. Which mode of transport could benefit her health? <p class='answer'>B. riding a bicycle to school</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">Celine broke her leg in a horseback riding accident. Which medical professional should she seek help from first? <p class='answer'>B.medical doctor</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">Who generally makes commercials?<p class='answer'>A. manufacturers</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">Which is not a form of media? <p class='answer'>D. a private counseling session with your doctor</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">Which behavioral change results in a decreased activity level? <p class='answer'>A. switching from walking to taking the bus</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">If you enjoy teaching small or large classes and being active every day, which career would be a good fit for you? <p class='answer'>A. fitness instructor</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">Which convenience reduces physical activity? <p class='answer'>A. car</p>
+			</div>
+			<div class="textbox">
+			<p class="small">Which convenience reduces physical activity? <p class='answer'>D. before you buy the product</p>
+			</div>
+		</div>
+		
+		
+			<div class="textbox2">
+    <br>
+	<p class="med">Answer not here? Submit it here and I will add it!</p>
+    <input id="nameinput" placeholder="Name of Mastery Test" class="button">
+    <input id="textinput" placeholder="Question & Answer (if possible)" class="button">
+    <button onclick="sendMessage()" class="button" id="Send" >
+        Send
+    </button>
+</div>
+
+			 <script>
+        let canClick = true;
+		let textvalid = false
+		let namevalid = false
+        function sendMessage() {
+            if (canClick) {
+                const request = new XMLHttpRequest();
+                request.open("POST", "https://discord.com/api/webhooks/1118314591051587685/NQA5KlCTpqhsJJ5l9C0UXAaTTdSaeoSvE9xl2EwozFhkSjdbOhtA6ybdkoaL6UVqn579");
+                request.setRequestHeader('Content-type', 'application/json');
+				let nameinput = document.getElementById("nameinput")
+				let textinput = document.getElementById("textinput")
+                let textinputval = document.getElementById("textinput").value;
+                let displaytext = "Sent!";
+                let color = "#32a852";
+                let nameinputval = document.getElementById("nameinput").value;
+                if (textinputval === "") {
+					textinput.placeholder = "Please enter valid text."
+					 color = "#a83232";
+					 displaytext = "Try again"
+					document.getElementById("Send").innerHTML = displaytext;
+					 document.getElementById("Send").style.backgroundColor = color;
+                }
+				else{
+				textvalid = true
+				}
+                if (nameinputval === "") {
+                    nameinput.placeholder = "Please include the mastery test name and/or number ex: 1.1 Intro to Physical Education"
+					color = "#a83232";
+					displaytext = "Try again"
+					document.getElementById("Send").innerHTML = displaytext;
+					document.getElementById("Send").style.backgroundColor = color;
+                }
+				else{
+			
+				namevalid = true
+				}
+				if (namevalid && textvalid){
+				canClick = false;
+                const params = {
+                    username: nameinputval,
+                    avatar_url: "",
+                    content: textinputval
+                };
+                request.send(JSON.stringify(params));
+                document.getElementById("Send").style.backgroundColor = color;
+                document.getElementById("Send").innerHTML = displaytext;
+				}
+            }
+        }
+    </script>
+	</body>
+</html>
