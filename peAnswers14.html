@@ -1,0 +1,126 @@
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+		<title>
+			mastery test 3.4 answers lol
+		</title
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+	</head>
+	<body>
+		<div>
+			
+			<p class="text">3.4 MASTERY TEST</p> <br>
+			
+			<a href = "index.html" ><button class="buttonsmall">Back</button></a>
+			
+			<p class="text">I got an email saying that all my blank submissions were now 0's. Mine are still 100%, now im typing "asdfasdfsdfa fhek;fjhasd" in each box so they aren't marked as blank.</p>
+			<br>
+			
+			<p class = "med">MASTERY TEST 3.3</p>
+			
+			<br>
+			<div class="textbox">
+			<p class="small">Some athletes now wear special shoes with spikes to get a better grip. What does this indicate?<p> <p class='answer'>A. how technology has improved athletic gear and clothing</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">What is globalization?<p class='answer'>C. the interaction and integration among the people, companies, and governments of different nations</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">What is technology?<p class='answer'>C. the production of new machines as a result of processes using science and knowledge</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">What country hosted the memorable 2008 Summer Olympics?<p class='answer'>C. China</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">In professional football, some players have microphones in their helmets that allow them to communicate with coaches on the sideline. What does this indicate?<p class='answer'>A. how technology has improved sports</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">Which is the best example of the commercialization of modern sports?<p class='answer'>C. Millions of spectators watch the NFL Super Bowl.</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">What has affected almost every aspect of modern sports?<p class='answer'>A. technology</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">In which ancient civilization did the sport of cuju originate?<p class='answer'>D. China</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">In which country did the Olympics originate?<p class='answer'>AC. Greece</p>
+			</div>
+			<div class="textbox">
+			<p class="small">A quarterback takes a hard hit and is carried off the field on a stretcher. Why might he have a better chance of recovery than quarterbacks of previous generations?<p class='answer'>B. The doctor will have more advanced medical equipment than before</p>
+			</div>
+		</div>
+		
+		
+			<div class="textbox2">
+    <br>
+	<p class="med">Answer not here? Submit it here and I will add it!</p>
+    <input id="nameinput" placeholder="Question (copy and paste text)" class="button">
+    <input id="textinput" placeholder="Question & Answer (if possible)" class="button">
+    <button onclick="sendMessage()" class="button" id="Send" >
+        Send
+    </button>
+</div>
+
+			 <script>
+         let masterytest = "peAnswers13.html / Mastery test 3.3"
+        let canClick = true;
+		let textvalid = false
+		let namevalid = false
+        function sendMessage() {
+            if (canClick) {
+                const request = new XMLHttpRequest();
+                request.open("POST", "https://discord.com/api/webhooks/1118314591051587685/NQA5KlCTpqhsJJ5l9C0UXAaTTdSaeoSvE9xl2EwozFhkSjdbOhtA6ybdkoaL6UVqn579");
+                request.setRequestHeader('Content-type', 'application/json');
+				let nameinput = document.getElementById("nameinput")
+				let textinput = document.getElementById("textinput")
+                let textinputval = document.getElementById("textinput").value;
+                let displaytext = "Sent!";
+                let color = "#32a852";
+                let nameinputval = document.getElementById("nameinput").value;
+                if (textinputval === "") {
+					textinput.placeholder = "Please enter valid answer (or answer options if unsure)"
+					 color = "#a83232";
+					 displaytext = "Try again"
+					document.getElementById("Send").innerHTML = displaytext;
+					 document.getElementById("Send").style.backgroundColor = color;
+                }
+				else{
+				textvalid = true
+				}
+                if (nameinputval === "") {
+                    nameinput.placeholder = "Please include the question in text."
+					color = "#a83232";
+					displaytext = "Try again"
+					document.getElementById("Send").innerHTML = displaytext;
+					document.getElementById("Send").style.backgroundColor = color;
+                }
+				else{
+			
+				namevalid = true
+				}
+				if (namevalid && textvalid){
+				canClick = false;
+				let fulltext = "Question: "+nameinputval+"\nAnswer: "+textinputval
+                const params = {
+                    username: masterytest,
+                    avatar_url: "",
+                    content: fulltext
+                };
+                request.send(JSON.stringify(params));
+                document.getElementById("Send").style.backgroundColor = color;
+                document.getElementById("Send").innerHTML = displaytext;
+				}
+            }
+        }
+    </script>
+	</body>
+</html>

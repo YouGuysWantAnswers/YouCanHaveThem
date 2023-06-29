@@ -1,0 +1,156 @@
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+		<title>
+			Unit 3 Post Test Answers lol
+		</title
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+	</head>
+	<body>
+		<div>
+			
+			<p class="text">UMIT 3 POST-TEST</p> <br>
+			
+			<a href = "index.html" ><button class="buttonsmall">Back</button></a>
+			
+			<p class="text">Here's the final test, thank you to everyone who used the website. I will be back for summer PE 2, although I won't be doing anything after PE 2 because only 2 credits are required, and let's face it, anyone who cares enough to take more than the required amount probably wouldn't be using this website in the first place. See you guys next summer!</p>
+			<br>
+			
+			<p class = "med">Unit 3 Post Test</p>
+			
+			<br>
+			<div class="textbox">
+			<p class="small">What must you do if you plan to exercise every day?<p> <p class='answer'>A. Arrange your day so that exercising is convenient.</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">You want to participate in a new health-enhancing activity, but the activity comes with certain risks. What is the best way to get accurate information about the risks?<p class='answer'>D. Talk to an expert who has experience with the activity.</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">During physical activity of high intensity, your heart will beat at a percentage of its maximum rate. Which range shows the correct percentages during this type of activity?<p class='answer'>C. 70%–85%</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">What is a risk assessment?<p class='answer'>C. a judgment regarding a hazard</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">Your friends invite you to go on vacation with them, but the vacation interferes with your daily exercise routine. What is the healthiest personal choice that you can make regarding the two events?<p class='answer'>D. Set aside time to exercise while you vacation with your friends.</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">Robyn has been working out five days a week for the past six months. She is now planning to take a month-long break from the gym. Which training principle should Robyn consider before taking this break? <p class='answer'>C. reversibility</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">Which component of exercise primarily strengthens your heart?<p class='answer'>C. cardio</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">How are progression and variation similar?<p class='answer'>A. Both state that changes in a routine are necessary for consistent gains.</p>
+			</div>
+			<br>
+			<div class="textbox">
+			<p class="small">Kristina works out seven days a week. Lately, she has been tired, and her body aches. If she is overtraining, which training principle should Kristina consider before continuing her program?<p class='answer'>B. recovery</p>
+			</div>
+			<div class="textbox">
+			<p class="small">What is the most significant benefit of exercising regularly?<p class='answer'>A. physical fitness</p>
+			</div>
+			<div class="textbox">
+			<p class="small">Which scenario would most likely lead to a higher level of physical fitness among people who live in a city?<p class='answer'>B. More people walk to school or work.</p>
+			</div>
+			<div class="textbox">
+			<p class="small">How does the use of a basic hand tool like a screwdriver affect your health?<p class='answer'>This is the stupidest question ever. It isn't D, I chose that and was wrong, i doubt it's C since someone online chose that one and got it wrong, so it's either A or B, possibly C. Upon answering, please send a message below stating whether or not the answer was correct so I can update it. If you get it wrong, you will still get a 19/20. Sorry for the inconvenience!</p>
+			</div>
+			<div class="textbox">
+			<p class="small">Why are commercial advertisements made?<p class='answer'>D. to convince the viewer to buy a product</p>
+			</div>
+			<div class="textbox">
+			<p class="small">A manufacturer makes a claim about its product in a TV commercial. Which is the best way to tell whether the claim is genuine?<p class='answer'>C. Speak with a consumer who has used the product.</p>
+			</div>
+			<div class="textbox">
+			<p class="small">Which career may be a good fit for you if you enjoy planning meals and learning about proper nutrition?<p class='answer'>D. registered dietician</p>
+			</div>
+			<div class="textbox">
+			<p class="small">What do multimillion-dollar sponsorships of famous athletes symbolize?<p class='answer'>C. commercialization</p>
+			</div>
+			<div class="textbox">
+			<p class="small">Which sport from ancient China is said to be the predecessor of modern soccer?<p class='answer'>B. cuju</p>
+			</div>
+			<div class="textbox">
+			<p class="small">Which technology allows doctors to evaluate whether an athlete has broken a bone?<p class='answer'>B. X-ray scanners</p>
+			</div>
+			<div class="textbox">
+			<p class="small">Which sporting event is symbolic of American culture?<p class='answer'>B. World Series (baseball)</p>
+			</div>
+			<div class="textbox">
+			<p class="small">How often are the modern Winter Olympic Games held?<p class='answer'>C. every four years</p>
+			</div>
+		</div>
+		
+		
+			<div class="textbox2">
+    <br>
+	<p class="med">Answer not here? Submit it here and I will add it!</p>
+    <input id="nameinput" placeholder="Question (copy and paste text)" class="button">
+    <input id="textinput" placeholder="Question & Answer (if possible)" class="button">
+    <button onclick="sendMessage()" class="button" id="Send" >
+        Send
+    </button>
+</div>
+
+			 <script>
+         let masterytest = "peAnswers13.html / Mastery test 3.3"
+        let canClick = true;
+		let textvalid = false
+		let namevalid = false
+        function sendMessage() {
+            if (canClick) {
+                const request = new XMLHttpRequest();
+                request.open("POST", "https://discord.com/api/webhooks/1118314591051587685/NQA5KlCTpqhsJJ5l9C0UXAaTTdSaeoSvE9xl2EwozFhkSjdbOhtA6ybdkoaL6UVqn579");
+                request.setRequestHeader('Content-type', 'application/json');
+				let nameinput = document.getElementById("nameinput")
+				let textinput = document.getElementById("textinput")
+                let textinputval = document.getElementById("textinput").value;
+                let displaytext = "Sent!";
+                let color = "#32a852";
+                let nameinputval = document.getElementById("nameinput").value;
+                if (textinputval === "") {
+					textinput.placeholder = "Please enter valid answer (or answer options if unsure)"
+					 color = "#a83232";
+					 displaytext = "Try again"
+					document.getElementById("Send").innerHTML = displaytext;
+					 document.getElementById("Send").style.backgroundColor = color;
+                }
+				else{
+				textvalid = true
+				}
+                if (nameinputval === "") {
+                    nameinput.placeholder = "Please include the question in text."
+					color = "#a83232";
+					displaytext = "Try again"
+					document.getElementById("Send").innerHTML = displaytext;
+					document.getElementById("Send").style.backgroundColor = color;
+                }
+				else{
+			
+				namevalid = true
+				}
+				if (namevalid && textvalid){
+				canClick = false;
+				let fulltext = "Question: "+nameinputval+"\nAnswer: "+textinputval
+                const params = {
+                    username: masterytest,
+                    avatar_url: "",
+                    content: fulltext
+                };
+                request.send(JSON.stringify(params));
+                document.getElementById("Send").style.backgroundColor = color;
+                document.getElementById("Send").innerHTML = displaytext;
+				}
+            }
+        }
+    </script>
+	</body>
+</html>
