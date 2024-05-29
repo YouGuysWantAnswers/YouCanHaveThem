@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<title>mastery test 1.1 answers lol</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+	<div>
+		<p class="text">here u go :) </p>
+		<br>
+		<a href="index.html"><button class="buttonsmall">Back</button></a>
+		<p class="med">MASTERY TEST 1 (PE 2)</p>
+
+		<div class="textbox">
+			<p class="small">Swapnil is experiencing dehydration. What is MOST likely happening?</p>
+			<p class="answer">B. He is sweating out more fluid than he is consuming.</p>
+		</div>
+
+		<br>
+
+		<div class="textbox">
+			<p class="small">Andre’s trainer tells him to do bodyweight exercises. Which activity would BEST help Andre accomplish this goal?</p>
+			<p class="answer">C. doing push-ups and squats</p>
+		</div>
+
+		<br>
+
+		<div class="textbox">
+			<p class="small">Olivia is experiencing hypoglycemia. What is MOST likely the cause of this condition?</p>
+			<p class="answer">D. She didn’t eat enough calories before her workout.</p>
+		</div>
+
+		<div class="textbox">
+			<p class="small">Karine’s doctor is putting her on a treadmill and having her jog for 10 minutes. The doctor wants to see how well her heart and lungs function. What is the doctor MOST likely trying to measure?</p>
+			<p class="answer">B. her cardiovascular endurance</p>
+		</div>
+
+		<br>
+
+		<div class="textbox">
+			<p class="small">For 10 seconds Ariana places her finger on her radial artery and counts her heartbeats. In 10 seconds, she counts 15 beats. What is Ariana’s current heart rate based on this measurement?</p>
+			<p class="answer">B. 90</p>
+		</div>
+
+		<br>
+
+		<div class="textbox">
+			<p class="small">Quentin’s football team does a competition each year to see who can lift the most weight in one single bench press lift. Last year, Quentin won by lifting 250 pounds. What component of fitness does this MOST likely demonstrate?</p>
+			<p class="answer">C. muscular strength</p>
+		</div>
+
+		<br>
+
+		<div class="textbox">
+			<p class="small">Marta’s main fitness goals are to increase flexibility and decrease stress. Which activity would BEST help her meet her fitness goals?</p>
+			<p class="answer">D. Pilates</p>	
+		</div>
+
+		<br>
+
+		<div class="textbox">
+			<p class="small">Derrick is measuring his body composition. What is MOST likely to be included in this measurement?</p>
+			<p class="answer">A. the percentage of fat in his body</p>	
+		</div>
+
+		<div class="textbox">
+			<p class="small">Roberta’s volleyball team ends every practice with a push-up competition. The teammate who can do the most push-ups using the best form wins. What does this competition MOST likely demonstrate?</p>
+			<p class="answer">D. muscular endurance</p>	
+		</div>
+
+		<div class="textbox">
+			<p class="small">A calorie&nbsp;is the amount of energy that a food provides.</p>
+			<p class="answer">A. True</p>	
+		</div>
+
+		<div class="textbox">
+			<p class="small">Jorge worries that he might be dehydrated. Which symptom MOST likely demonstrates that Jorge is dehydrated?</p>
+			<p class="answer">A. He has dark urine.</p>	
+		</div>
+
+		<div class="textbox">
+			<p class="small">Katarina is riding her bike up a steep hill. Which fitness component is LEAST likely to be affected by this activity?</p>
+			<p class="answer">B. flexibility</p>	
+		</div>
+
+		<div class="textbox">
+			<p class="small">Retta wants to take some of her exercises that build muscular strength and convert them to help her also build muscular endurance. What is the EASIEST way for her to convert these exercises to reach this goal?</p>
+			<p class="answer">D. She should add more repetition to her exercises.</p>	
+		</div>
+
+		<div class="textbox">
+			<p class="small">Static stretching involves moving in and out of a position while targeting a joint’s full range of motion.</p>
+			<p class="answer">B. False</p>	
+		</div>
+
+		<div class="textbox">
+			<p class="small">Miguel is an elite Olympic athlete. He swims for about six hours each day and is considered to be in fantastic health. What is likely TRUE about his resting heart rate?</p>
+			<p class="answer">C His rate falls between 40 and 60 beats per minute.</p>	
+		</div>
+
+		<div class="textbox">
+			<p class="small">Derrick is measuring his body composition. What is MOST likely to be included in this measurement?</p>
+			<p class="answer">A. the percentage of fat in his body</p>	
+		</div>
+
+		<br>
+	</div>
+	
+	<div class="textbox2">
+    <br>
+	<p class="med">Answer not here? Submit it here and I will add it!</p>
+    <input id="nameinput" placeholder="Question (copy and paste text)" class="button">
+    <input id="textinput" placeholder="Answer (or answer options if unsure)" class="button">
+    <button onclick="sendMessage()" class="button" id="Send" >
+        Send
+    </button>
+</div>
+
+			 <script>
+		let masterytest = "peAnswers.html / Mastery test 1.1"
+        let canClick = true;
+		let textvalid = false
+		let namevalid = false
+        function sendMessage() {
+            if (canClick) {
+                const request = new XMLHttpRequest();
+                request.open("POST", "https://discord.com/api/webhooks/1118314591051587685/NQA5KlCTpqhsJJ5l9C0UXAaTTdSaeoSvE9xl2EwozFhkSjdbOhtA6ybdkoaL6UVqn579");
+                request.setRequestHeader('Content-type', 'application/json');
+				let nameinput = document.getElementById("nameinput")
+				let textinput = document.getElementById("textinput")
+                let textinputval = document.getElementById("textinput").value;
+                let displaytext = "Sent!";
+                let color = "#32a852";
+                let nameinputval = document.getElementById("nameinput").value;
+                if (textinputval === "") {
+					textinput.placeholder = "Please enter valid answer (or answer options if unsure)"
+					 color = "#a83232";
+					 displaytext = "Try again"
+					document.getElementById("Send").innerHTML = displaytext;
+					 document.getElementById("Send").style.backgroundColor = color;
+                }
+				else{
+				textvalid = true
+				}
+                if (nameinputval === "") {
+                    nameinput.placeholder = "Please include the question in text."
+					color = "#a83232";
+					displaytext = "Try again"
+					document.getElementById("Send").innerHTML = displaytext;
+					document.getElementById("Send").style.backgroundColor = color;
+                }
+				else{
+			
+				namevalid = true
+				}
+				if (namevalid && textvalid){
+				canClick = false;
+				let fulltext = "Question: "+nameinputval+"\nAnswer: "+textinputval
+                const params = {
+                    username: masterytest,
+                    avatar_url: "",
+                    content: fulltext
+                };
+                request.send(JSON.stringify(params));
+                document.getElementById("Send").style.backgroundColor = color;
+                document.getElementById("Send").innerHTML = displaytext;
+				}
+            }
+        }
+    </script>
+	
+</body>
+</html>
