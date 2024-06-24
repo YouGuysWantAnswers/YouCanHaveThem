@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<title>mastery test 1.1 answers lol</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+	<div>
+		<p class="text">here u go :) </p>
+		<br>
+		<a href="index.html"><button class="buttonsmall">Back</button></a>
+		<p class="med">MASTERY TEST 2 (PE 2)</p>
+
+		<div class="textbox">
+			<p class="small">Ellery is thinking about purchasing a new piece of workout equipment. According to the tips provided by the Federal Trade Commission (FTC), what is the BEST thing for Ellery to do?</p>
+			<p class="answer">B. Try the equipment first at a local gym.</p>
+		</div>
+
+		<br>
+
+		<div class="textbox">
+			<p class="small">Moussa has a negative self-image. What is MOST likely to be TRUE about MOUSSA?</p>
+			<p class="answer">C. He is more prone to depression.</p>
+		</div>
+
+		<br>
+
+		<div class="textbox">
+			<p class="small">Derrick wants to try a new workout, but he doesn’t want to get injured. What is the BEST thing for Derrick to do to decrease his chance of injury?</p>
+			<p class="answer">D. Learn the basics of proper form.</p>
+		</div>
+
+		<div class="textbox">
+			<p class="small">On a job evaluation, Deshaun was rated high in productivity by supervisors. What does this MOST likely mean?</p>
+			<p class="answer">B. Deshaun consistently gets things done.</p>
+		</div>
+
+		<br>
+
+		<div class="textbox">
+			<p class="small">Ariana wants to make a salad using only cruciferous vegetables. What should she NOT include in the salad?</p>
+			<p class="answer">A. spinach</p>
+		</div>
+
+		<br>
+
+		<div class="textbox">
+			<p class="small">Antonio is leading his fitness class. While instructing deadlifts, what should he say to his classmates to MOST likely help them avoid injury?</p>
+			<p class="answer">B. Keep a flat back.</p>
+		</div>
+
+		<br>
+
+		<div class="textbox">
+			<p class="small">Arnold wants to make sure he is getting enough exercise. According to the 2018 Physical Activity Guidelines for Americans, which of Arnold’s weekly workout plans meets their minimum recommendation?</p>
+			<p class="answer">D. He walks for 30 minutes a day, 5 days a week.</p>	
+		</div>
+
+		<br>
+
+		<div class="textbox">
+			<p class="small">What does the famous study known as “The Marshmallow Experiment” attempt to demonstrate?</p>
+			<p class="answer">A. the struggles with delayed gratification</p>	
+		</div>
+
+		<div class="textbox">
+			<p class="small">A negative body image is always based on reality.</p>
+			<p class="answer">B. False</p>	
+		</div>
+
+		<div class="textbox">
+			<p class="small">According to the US Department of Health, which adult male is eating the number of calories in his diet that falls within the required range?</p>
+			<p class="answer">C. Jose, who eats 2600 calories a day</p>	
+		</div>
+
+		<div class="textbox">
+			<p class="small">Georgia has discovered that her weight loss product is a scam. What does this MOST likely mean?</p>
+			<p class="answer">D. It doesn’t actually work.</p>	
+		</div>
+
+		<div class="textbox">
+			<p class="small">When practicing time management skills, what is MOST important for maximizing productivity?</p>
+			<p class="answer">D. prioritizing a person’s needs over their wants</p>	
+		</div>
+
+		<div class="textbox">
+			<p class="small">Ina is a master of self-awareness. What is she MOST likely to say based on her level of self-awareness?</p>
+			<p class="answer">A. I’m an introvert, so I need some quiet time to reenergize.</p>	
+		</div>
+
+		<div class="textbox">
+			<p class="small">A weight loss product manufacturer altered the images of their before-and-after photos on their website to make the weight loss effects appear even more dramatic than their real-life results. What does this MOST accurately demonstrate?</p>
+			<p class="answer">C. false advertising</p>	
+		</div>
+
+		<div class="textbox">
+			<p class="small">Nada has trouble motivating herself to stick with her workout plan. What is a proven way for her to increase the likelihood of completing her workouts?</p>
+			<p class="answer">A. She should write down her plan in her calendar.</p>	
+		</div>
+
+
+		<br>
+	</div>
+	
+	<div class="textbox2">
+    <br>
+	<p class="med">Answer not here? Submit it here and I will add it!</p>
+    <input id="nameinput" placeholder="Question (copy and paste text)" class="button">
+    <input id="textinput" placeholder="Answer (or answer options if unsure)" class="button">
+    <button onclick="sendMessage()" class="button" id="Send" >
+        Send
+    </button>
+</div>
+
+			 <script>
+		let masterytest = "peAnswers.html / Mastery test 1.1"
+        let canClick = true;
+		let textvalid = false
+		let namevalid = false
+        function sendMessage() {
+            if (canClick) {
+                const request = new XMLHttpRequest();
+                request.open("POST", "https://discord.com/api/webhooks/1118314591051587685/NQA5KlCTpqhsJJ5l9C0UXAaTTdSaeoSvE9xl2EwozFhkSjdbOhtA6ybdkoaL6UVqn579");
+                request.setRequestHeader('Content-type', 'application/json');
+				let nameinput = document.getElementById("nameinput")
+				let textinput = document.getElementById("textinput")
+                let textinputval = document.getElementById("textinput").value;
+                let displaytext = "Sent!";
+                let color = "#32a852";
+                let nameinputval = document.getElementById("nameinput").value;
+                if (textinputval === "") {
+					textinput.placeholder = "Please enter valid answer (or answer options if unsure)"
+					 color = "#a83232";
+					 displaytext = "Try again"
+					document.getElementById("Send").innerHTML = displaytext;
+					 document.getElementById("Send").style.backgroundColor = color;
+                }
+				else{
+				textvalid = true
+				}
+                if (nameinputval === "") {
+                    nameinput.placeholder = "Please include the question in text."
+					color = "#a83232";
+					displaytext = "Try again"
+					document.getElementById("Send").innerHTML = displaytext;
+					document.getElementById("Send").style.backgroundColor = color;
+                }
+				else{
+			
+				namevalid = true
+				}
+				if (namevalid && textvalid){
+				canClick = false;
+				let fulltext = "Question: "+nameinputval+"\nAnswer: "+textinputval
+                const params = {
+                    username: masterytest,
+                    avatar_url: "",
+                    content: fulltext
+                };
+                request.send(JSON.stringify(params));
+                document.getElementById("Send").style.backgroundColor = color;
+                document.getElementById("Send").innerHTML = displaytext;
+				}
+            }
+        }
+    </script>
+	
+</body>
+</html>
