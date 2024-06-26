@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<title>mastery test 1.1 answers lol</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+	<div>
+		<p class="text">here u go :), also this is the final answer sheet, goodbye </p>
+		<p class="text">also brainly can suck my nuts, i got two answers wrong because it just guesses the answer (the answers listed should be right, send a ticket at the bottom if they aren't)</p>
+		<br>
+		<a href="index.html"><button class="buttonsmall">Back</button></a>
+		<p class="med">MASTERY TEST 2 (PE 2)</p>
+
+		<div class="textbox">
+			<p class="small">Selena’s doctor wants to help her in her battle against depression. The doctor tells her about James Blumenthal’s 2007 study and how his findings might be helpful to her. Based on this study’s conclusion, what is Selena’s doctor MOST likely to recommend?</p>
+			<p class="answer">B. regular exercise</p>
+		</div>
+
+		<br>
+
+		<div class="textbox">
+			<p class="small">Micah sees his cousin earn a college scholarship for basketball. Micah thinks to himself, “If he can earn a sports scholarship, so can I!” What does this scenario BEST demonstrate for Micah?</p>
+			<p class="answer">A. a vicarious experience</p>
+		</div>
+
+		<br>
+
+		<div class="textbox">
+			<p class="small">Which part of the human body is responsible for memory formation, mood, and motivation?</p>
+			<p class="answer">D. the hippocampus</p>
+		</div>
+
+		<div class="textbox">
+			<p class="small">What is most likely TRUE about cardio fitness?</p>
+			<p class="answer">B. It brings oxygen into the blood and requires people to breathe harder.</p>
+		</div>
+
+		<br>
+
+		<div class="textbox">
+			<p class="small">Exercise has shown to improve Janae’s A1C levels. What does this MOST likely mean?</p>
+			<p class="answer">C. Her blood sugar control is improved.</p>
+		</div>
+
+		<br>
+
+		<div class="textbox">
+			<p class="small">Cooper’s baseball coach says he needs to add specificity to his workout plan to help him become a better pitcher. What does the coach MOST likely want Cooper to do to add specificity?</p>
+			<p class="answer">B. perform exercises that will build arm strength</p>
+		</div>
+
+		<br>
+
+		<div class="textbox">
+			<p class="small">Nadine has started lifting weights for 20 minutes twice a week. How is she LEAST likely to benefit from these strength training workouts?</p>
+			<p class="answer">A. She will become more flexible.</p>	
+		</div>
+
+		<br>
+
+		<div class="textbox">
+			<p class="small">While playing an exergame, Keegan sees a message pop up on the screen that says, “You have been active for 43 minutes, and you have taken 5,899 steps!” What does this message MOST accurately demonstrate?</p>
+			<p class="answer">B. feedback</p>	
+		</div>
+
+		<div class="textbox">
+			<p class="small">Which hormone, which is increased during exercise, is responsible for stabilizing moods, bringing feelings of happiness, and helping with sleeping, eating, and digestion?</p>
+			<p class="answer">A. serotonin (not estrogen lmao)</p>	
+		</div>
+
+		<div class="textbox">
+			<p class="small">Miguel always takes large goals and breaks them into smaller chunks. When he was training for a marathon, he started running 20 miles a week. Then he increased his mileage gradually over several months until he was running 50 miles a week. What does this scenario BEST demonstrate?</p>
+			<p class="answer">B. the principle of progression</p>	
+		</div>
+
+		<div class="textbox">
+			<p class="small">Dylan is getting ready to work out. What would a trainer MOST likely advise about a warm-up routine?</p>
+			<p class="answer">A. Dylan’s warm-up should be related to specific workout goals.</p>	
+		</div>
+
+		<div class="textbox">
+			<p class="small">Sanvi is working on core training. Which body part is NOT considered part of her core?</p>
+			<p class="answer">C. her glutes</p>	
+		</div>
+
+		<div class="textbox">
+			<p class="small">When Patrice writes in her weekly journal about her workouts, she finds it helpful because it makes her really pay attention to how she feels. What does this journal reflection BEST demonstrate?</p>
+			<p class="answer">C. self-awareness</p>	
+		</div>
+
+		<div class="textbox">
+			<p class="small">Patrick works out on a regular basis. How will this MOST likely affect his mental health?</p>
+			<p class="answer">A. He will experience decreased anxiety and decreased stress.</p>	
+		</div>
+
+		<div class="textbox">
+			<p class="small">Depression and anxiety significantly impact one’s beliefs about themselves.</p>
+			<p class="answer">A. True</p>	
+		</div>
+
+
+		<br>
+	</div>
+	
+	<div class="textbox2">
+    <br>
+	<p class="med">Answer not here? Submit it here and I will add it!</p>
+    <input id="nameinput" placeholder="Question (copy and paste text)" class="button">
+    <input id="textinput" placeholder="Answer (or answer options if unsure)" class="button">
+    <button onclick="sendMessage()" class="button" id="Send" >
+        Send
+    </button>
+</div>
+
+			 <script>
+		let masterytest = "peAnswers.html / Mastery test 1.1"
+        let canClick = true;
+		let textvalid = false
+		let namevalid = false
+        function sendMessage() {
+            if (canClick) {
+                const request = new XMLHttpRequest();
+                request.open("POST", "https://discord.com/api/webhooks/1118314591051587685/NQA5KlCTpqhsJJ5l9C0UXAaTTdSaeoSvE9xl2EwozFhkSjdbOhtA6ybdkoaL6UVqn579");
+                request.setRequestHeader('Content-type', 'application/json');
+				let nameinput = document.getElementById("nameinput")
+				let textinput = document.getElementById("textinput")
+                let textinputval = document.getElementById("textinput").value;
+                let displaytext = "Sent!";
+                let color = "#32a852";
+                let nameinputval = document.getElementById("nameinput").value;
+                if (textinputval === "") {
+					textinput.placeholder = "Please enter valid answer (or answer options if unsure)"
+					 color = "#a83232";
+					 displaytext = "Try again"
+					document.getElementById("Send").innerHTML = displaytext;
+					 document.getElementById("Send").style.backgroundColor = color;
+                }
+				else{
+				textvalid = true
+				}
+                if (nameinputval === "") {
+                    nameinput.placeholder = "Please include the question in text."
+					color = "#a83232";
+					displaytext = "Try again"
+					document.getElementById("Send").innerHTML = displaytext;
+					document.getElementById("Send").style.backgroundColor = color;
+                }
+				else{
+			
+				namevalid = true
+				}
+				if (namevalid && textvalid){
+				canClick = false;
+				let fulltext = "Question: "+nameinputval+"\nAnswer: "+textinputval
+                const params = {
+                    username: masterytest,
+                    avatar_url: "",
+                    content: fulltext
+                };
+                request.send(JSON.stringify(params));
+                document.getElementById("Send").style.backgroundColor = color;
+                document.getElementById("Send").innerHTML = displaytext;
+				}
+            }
+        }
+    </script>
+	
+</body>
+</html>
